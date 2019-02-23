@@ -5,8 +5,8 @@
 %define __requires_exclude ^.*$
 %global debug_package %{nil}
 
-%define family discovery
-%define device h3213
+%define family kagura
+%define device f8332
 
 Name:          droid-system-vendor-%{family}-%{device}
 Summary:       Built from source /vendor for Droid HAL adaptations
@@ -17,7 +17,7 @@ License:       Proprietary
 Requires:      droid-system-vendor-%{family}
 Source0:       %{name}-%{version}.tgz
 Source1:       droid-system-vendor-%{family}-rpmlintrc
-URL:           https://bitbucket.org/jolla/sony-nile-droid-vendor-dicovery
+URL:           https://bitbucket.org/jolla/sony-nile-droid-vendor-discovery
 
 %description
 %{summary}

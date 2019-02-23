@@ -1,5 +1,5 @@
-%define device discovery
-%define rpm_device discovery
+%define device kagura
+%define rpm_device kagura
 
 %define variant -vendor
 
@@ -91,6 +91,9 @@ Requires(post): libcap
 [ -e /vendor/rfs/msm/slpi/readonly/vendor ] && chown 0:2000 /vendor/rfs/msm/slpi/readonly/vendor
 [ -e /vendor/usr ] && chown 0:2000 /vendor/usr
 [ -e /vendor/usr/keylayout ] && chown 0:2000 /vendor/usr/keylayout
-[ -e /vendor/./bin/hostapd ] && setcap cap_net_admin,cap_net_raw+ep /vendor/./bin/hostapd
-[ -e /vendor/./bin/hw/android.hardware.bluetooth@1.0-service ] && setcap cap_net_admin,cap_sys_nice+ep /vendor/./bin/hw/android.hardware.bluetooth@1.0-service
-[ -e /vendor/./bin/hw/android.hardware.wifi@1.0-service ] && setcap cap_net_admin,cap_net_raw+ep /vendor/./bin/hw/android.hardware.wifi@1.0-service
+
+# TODO: These fail
+# -> Need to find out a way to apply caps from the init files!
+#[ -e /vendor/./bin/hostapd ] && setcap cap_net_admin,cap_net_raw+ep /vendor/./bin/hostapd
+#[ -e /vendor/./bin/hw/android.hardware.bluetooth@1.0-service ] && setcap cap_net_admin,cap_sys_nice+ep /vendor/./bin/hw/android.hardware.bluetooth@1.0-service
+#[ -e /vendor/./bin/hw/android.hardware.wifi@1.0-service ] && setcap cap_net_admin,cap_net_raw+ep /vendor/./bin/hw/android.hardware.wifi@1.0-service
