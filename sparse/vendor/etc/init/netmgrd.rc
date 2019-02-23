@@ -15,7 +15,7 @@ service netmgrd /odm/bin/netmgrd
     writepid /dev/cpuset/system-background/tasks
 
 on property:ro.boot.baseband=msm
-    enable netmgrd
+    #enable netmgrd
 
 on property:ro.boot.baseband=sdm
-    enable netmgrd
+    #enable netmgrd
